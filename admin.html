@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin | SINEKULTURA</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<main class="wrap">
+  <section id="login">
+    <h1>Admin login</h1><p id="loginErr" class="err"></p>
+    <form id="lf" class="form narrow">
+      <label>Username <input name="user" required></label>
+      <label>Password <input type="password" name="pass" required></label>
+      <button class="btn" type="submit">Log in</button>
+    </form>
+  </section>
+
+  <section id="dash" class="hidden">
+    <h1>Admin dashboard</h1><p id="msg" class="ok"></p>
+    <p><button class="btn ghost" id="logout">Log out</button> <button class="btn ghost" id="resetData">Reset sample data</button></p>
+
+    <section id="formBox" class="hidden">
+      <h2 id="formTitle">Add movie</h2><div id="formErr"></div>
+      <form id="mf" class="form narrow" novalidate>
+        <label>Title <input name="title"></label>
+        <label>Release year <input type="number" name="year"></label>
+        <label>Director <input name="director"></label>
+        <label>Genre <input name="genre"></label>
+        <label>Poster URL or path (optional) <input name="poster" placeholder="images/himala.jpg"></label>
+        <label>Synopsis <textarea name="synopsis" rows="5"></textarea></label>
+        <button class="btn" type="submit">Save movie</button>
+        <button class="btn ghost" type="button" id="cancel">Cancel</button>
+      </form>
+    </section>
+
+    <h2>Movies <button class="btn" id="addBtn">Add movie</button></h2>
+    <div class="table-wrap"><table id="mt"></table></div>
+    <h2>Reviews</h2>
+    <div class="table-wrap"><table id="rt"></table></div>
+  </section>
+</main>
+<script src="js/db.js"></script><script src="js/admin.js"></script>
+</body></html>
